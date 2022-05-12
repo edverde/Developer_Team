@@ -10,5 +10,13 @@
  * '/calendar' => 'calendar#index'
  */
 $routes = array(
-	'/test' => 'test#index'
+	'/test' => 'test#index',
+	'/kk' => 'error#kk',
+	'/tascat' => 'test#index',
+	'/nova' => 'crear#crear',
+	'/mod' => 'mod#mod',
+	'/eliminar' => 'eliminar#eliminar',
+	'/mostrar' => 'mostrar#mostrar'
+
+	
 );

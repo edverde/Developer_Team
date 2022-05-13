@@ -1,17 +1,23 @@
 <body>
-    <main class="">
+    <main>
         
         <div class ="mains bg-orange-300 ">
             <h1 class="p-5 text-white text-center text-3xl font-bold py-2 drop-shadow-xl">Crear Tasca</h1>
             <form action="" class="p-5">
+                <label for="numero">Numero de tasca: </label> <br>
+                <input type="number" id="numero" name="numero" class="rounded-md w-full outline-orange-500 mb-2"><br>
                 <label for="nombre">Nom: </label> <br>
-                <input type="text" id="nombre" name="nom" class="rounded-md w-full"><br><br>
-                <label for="data">Data: </label> <br>
-                <input type="date" id="data" name="data_inici" class="rounded-md w-full"><br><br>
+                <input type="text" id="nombre" name="nom" class="rounded-md w-full outline-orange-500 mb-2"><br>
+                <label for="dataI">Data inici: </label> <br>
+                <input type="date" id="dataI" name="data_inici" class="rounded-md w-full  outline-orange-500 mb-2"><br>
+                <label for="dataF">Data final: </label> <br>
+                <input type="date" id="dataF" name="data_final" class="rounded-md w-full  outline-orange-500 mb-2"><br>
                 <label>Estat: </label> <br>
-                <INPUT TYPE="checkbox" NAME="estat" VALUE="pendent" class="rounded-full">Pendent
-                <INPUT TYPE="checkbox" NAME="estat" VALUE="execusio" class="rounded-full">En execusió
-                <INPUT TYPE="checkbox" NAME="estat" VALUE="acabada" class="rounded-full">Finalitzada<br><br>
+                <div class="flex items-center align-center justify-around mb-8">
+                    <INPUT TYPE="radio" NAME="estat" VALUE="pendent" class="text-orange-500">Pendent
+                    <INPUT TYPE="radio" NAME="estat" VALUE="execusio" class="text-indigo-600" >En execusió
+                    <INPUT TYPE="radio" NAME="estat" VALUE="acabada" class="text-orange-500">Finalitzada
+                </div>
                 <input type="submit" value="Guardar" class="boton w-full  bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full">
             </form>
         </div>

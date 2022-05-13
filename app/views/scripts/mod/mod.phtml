@@ -1,1 +1,23 @@
-MOD
+<body>
+    <main>
+        
+        <div class ="mains bg-orange-300 ">
+            <h1 class="p-5 text-white text-center text-3xl font-bold py-2 drop-shadow-xl">Modificar Tasca</h1>
+            <form action="" class="p-5">
+                <label for="numero">Numero de tasca: </label> <br>
+                <input type="number" id="numero" name="numero" class="rounded-md w-full outline-orange-500"><br><br>
+                <label for="nombre">Nom: </label> <br>
+                <input type="text" id="nombre" name="nom" class="rounded-md w-full outline-orange-500"><br><br>
+                <label for="data">Data: </label> <br>
+                <input type="date" id="data" name="data_inici" class="rounded-md w-full  outline-orange-500"><br><br>
+                <label>Estat: </label> <br>
+                <div class="flex items-center align-center justify-around mb-8">
+                    <INPUT TYPE="radio" NAME="estat" VALUE="pendent" class="text-orange-500">Pendent
+                    <INPUT TYPE="radio" NAME="estat" VALUE="execusio" class="text-indigo-600" >En execusió
+                    <INPUT TYPE="radio" NAME="estat" VALUE="acabada" class="text-orange-500">Finalitzada
+                </div>
+                <input type="submit" value="Guardar" class="boton w-full  bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full">
+            </form>
+        </div>
+    </main>
+</body>

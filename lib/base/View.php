@@ -2,13 +2,15 @@
 
 /**
  * A class for handling the view logic of the system
+ * 
+ * Una clase para manejar la lógica de vista del sistema.
  *
  */
 class View
 {
-	// used for holding the content of the view script
+	// used for holding the content of the view script (utilizado para contener el contenido de la secuencia de comandos de vista)
 	protected $_content = "";
-	// the standard layout
+	// the standard layout (el diseño estándar)
 	protected $_layout = 'layout';
 	
 	protected $_viewEnabled = true;
@@ -16,7 +18,7 @@ class View
 	
 	// initializes the data array
 	protected $_data = array();
-	// intializes the additional javascripts to add to the header.
+	// intializes the additional javascripts to add to the header. (inicializa los javascripts adicionales para agregar al encabezado)
 	protected $_javascripts = '';
 	
 	public $settings = null;
@@ -27,7 +29,7 @@ class View
 	}
 
 	/**
-	 * Renders the view script, and stores the output
+	 * Renders the view script, and stores the output (Representa el script de vista y almacena la salida.)
 	 */
 	protected function _renderViewScript($viewScript)
 	{
@@ -55,7 +57,7 @@ class View
 	public function render($viewScript)
 	{
 	  if ($viewScript && $this->_viewEnabled) {
-  		// renders the view script
+  		// renders the view script (renderiza el script de vista)
   		$this->_renderViewScript($viewScript);
 	  }
 		
@@ -64,7 +66,7 @@ class View
 	  }
 	  else {
   		// includes the current view, which uses the "$this->content()" to output the 
-  		// view script that was just rendered
+  		// view script that was just rendered (incluye la vista actual, que usa "$this->content()" para generar el script de vista que se acaba de representar)
   		include(ROOT_PATH . '/app/views/layouts/' . $this->_getLayout() . '.phtml');
 	  }
 	}

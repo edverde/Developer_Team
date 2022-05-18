@@ -1,0 +1,25 @@
+<body>
+    <main>
+        
+        <div class ="mains bg-orange-300 ">
+            <h1 class="p-5 text-white text-center text-3xl font-bold py-2 drop-shadow-xl">Modificar Tasca</h1>
+            <form action="" class="p-5">
+                <label for="numero">Nom de la tasca: </label> <br>
+                <input type="number" id="numero" name="numero" class="rounded-md w-full outline-orange-500"><br>
+                <label for="nombre">Nom del creador: </label> <br>
+                <input type="text" id="nombre" name="nom" class="rounded-md w-full outline-orange-500"><br>
+                <label for="dataI">Data inici: </label> <br>
+                <input type="datetime-local" id="dataI" name="data_inici" class="rounded-md w-full  outline-orange-500"><br>
+                <label for="dataF">Data final: </label> <br>
+                <input type="datetime-local" id="dataF" name="data_final" class="rounded-md w-full  outline-orange-500"><br>
+                <label for="estat">Estat: </label> <br>
+                <select name="estat" id="estat"  class="rounded-md w-full  outline-orange-500 mb-2">
+                    <option value="pendent">Pendent</option>
+                    <option value="execusio">En execusio</option>
+                    <option value="finalitzada">Finalitzada</option>    
+                </select> <br>
+                <input type="submit" value="Guardar" class="boton w-full  bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full">
+            </form>
+        </div>
+    </main>
+</body>

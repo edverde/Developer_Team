@@ -30,4 +30,8 @@ class ErrorController extends Controller
 		error_log($this->view->error);
 		error_log($this->_exception->getTraceAsString());
 	}
+	public function kkAction(){
+		echo "No tengo papel de wc";
+		exit();
+	}
 }

@@ -1,6 +1,6 @@
 <?php
 
-class TestController extends ApplicationController
+class Tasca extends ApplicationController
 {
 	public function indexAction()
 	{
@@ -15,13 +15,6 @@ class TestController extends ApplicationController
 		echo "hello from test::check";
 	}
 
-	public function soparAction()
-	{
-		// echo "quiero morir";
-		// exit();
-		$this->view->message = "hello from test::index";
-		
-	}
 	public function vistaAction()
 	{
 		// echo "quiero morir";

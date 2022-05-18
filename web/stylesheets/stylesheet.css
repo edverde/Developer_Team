@@ -1,0 +1,74 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    
+    
+}
+
+body {
+    /* background-color: black; */
+    /* height: 500px; */
+    /* background-image: url("https://img.freepik.com/foto-gratis/disposicion-elementos-escritorio-sobre-fondo-amarillo_23-2148513310.jpg?w=2000");
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position:left center;
+    background-attachment: scroll; */
+    /* background-color: #f9de9b; */
+    background-image: url("../images/backweb.jpg" );
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+}
+main{
+    max-width: 80%;
+    margin:auto;
+}
+
+
+    
+.mains{
+    height: 450px;
+    width: 375px;
+    border-radius: 20px ;
+    margin:93px auto;
+    
+}
+.principal{
+    margin-top:15%;
+}
+.boton{
+    margin: 10px auto;
+}
+.cont_img{
+    width: 450px;
+    margin:auto;
+}
+/* .relative{
+    position:relative;
+    top:65px;
+    z-index: -1;
+
+} */
+/* .absolute{
+    position:absolute;
+    left:43%;
+    top:25%;
+} */
+._header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(249, 115, 22, .7);
+}
+._footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(249, 115, 22, .7);
+}
+.bgspecial{
+    background-color: rgba(249, 115, 22, .3)
+}
+

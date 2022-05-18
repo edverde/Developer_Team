@@ -9,15 +9,15 @@
                 <label for="nombre">Nom del creador: </label> <br>
                 <input type="text" id="nombre" name="nom" class="rounded-md w-full outline-orange-500 mb-2"><br>
                 <label for="dataI">Data inici: </label> <br>
-                <input type="date" id="dataI" name="data_inici" class="rounded-md w-full  outline-orange-500 mb-2"><br>
-                <!-- <label for="dataF">Data final: </label> <br>
-                <input type="date" id="dataF" name="data_final" class="rounded-md w-full  outline-orange-500 mb-2"><br> -->
-                <label>Estat: </label> <br>
-                <div class="flex items-center align-center justify-around mb-8">
-                    <INPUT TYPE="radio" NAME="estat" VALUE="pendent" class="text-orange-500">Pendent
-                    <INPUT TYPE="radio" NAME="estat" VALUE="execusio" class="text-indigo-600" >En execusió
-                    <INPUT TYPE="radio" NAME="estat" VALUE="acabada" class="text-orange-500">Finalitzada
-                </div>
+                <input type="datetime-local" id="dataI" name="data_inici" class="rounded-md w-full  outline-orange-500 mb-2"><br>
+                <label for="dataF">Data final: </label> <br>
+                <input type="datetime-local" id="dataF" name="data_final" class="rounded-md w-full  outline-orange-500 mb-2"><br>
+                <label for="estat">Estat: </label> <br>
+                <select name="estat" id="estat"  class="rounded-md w-full  outline-orange-500 mb-2">
+                    <option value="pendent">Pendent</option>
+                    <option value="execusio">En execusio</option>
+                    <option value="finalitzada">Finalitzada</option>    
+                </select> <br> <br>
                 <input type="submit" value="Guardar" class="boton w-full  bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full">
             </form>
         </div>

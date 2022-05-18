@@ -18,14 +18,15 @@ $routes = array(
 	// '/vista' => 'tasca#index',
 	// '/eliminar' => 'eliminar#eliminar',
 	// '/mostrar' => 'mostrar#mostrar'
-	'/test' => 'test#index',
-	'/kk' => 'error#kk',
-	'/tascat' => 'test#index',
-	'/vista' => 'test#vista',
+	'/' => 'test#vista',
+	// '/kk' => 'error#kk',
+	// '/tascat' => 'test#index',
+	'/index' => 'test#vista',
 	'/nova' => 'crear#crear',
 	'/mod' => 'mod#mod',
-	'/eliminar' => 'eliminar#eliminar',
-	'/mostrar' => 'mostrar#mostrar'
+	'/mostrar' => 'buscar#buscar'
+	// '/eliminar' => 'eliminar#eliminar',
+	// '/mostrar' => 'mostrar#mostrar'
 
 	
 );

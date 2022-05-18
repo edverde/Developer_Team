@@ -1,8 +1,8 @@
 <?php
 
-class VistaController extends ApplicationController
+class BuscarController extends ApplicationController
 {
-	public function vistaAction()
+	public function buscarAction()
 	{
 		// echo "quiero morir";
 		// exit();
@@ -10,5 +10,5 @@ class VistaController extends ApplicationController
 		
 	}
 	
-
+	
 }

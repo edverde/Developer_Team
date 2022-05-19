@@ -22,9 +22,8 @@ class CrearController extends ApplicationController
 	public function crearTascaAction(){
 		
 			$model = new Model_ddbb();
-			//$model->novaTasca($POST["nom_tasca"], $POST["nom"], $POST["data_inici"], $POST["data_final"]);
-			$model->testdbug();
-			exit();
+			$model->novaTasca($POST["nom_tasca"], $POST["nom"], $POST["data_inici"], $POST["data_final"]);
+			
 
 		
 		

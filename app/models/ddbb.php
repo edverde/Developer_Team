@@ -23,6 +23,7 @@ class Model_ddbb extends Model{
             $data = json_decode($contenido, true);
             array_push($data, $array);
             file_put_contents("ddbb.json",json_encode($data, JSON_PRETTY_PRINT));
+        
         }else{
             $data = array();
             array_push($data, $array);
@@ -30,9 +31,26 @@ class Model_ddbb extends Model{
             fwrite($f, json_encode($data, JSON_PRETTY_PRINT));
             fclose($f);
 
+            
+
         }
-        header("Location: vista.phtml");
+        header("Location: /web/index");
     }
+    // public function novaTasca($nom_tasca, $nom_creador, $data_inici, $data_final){
+    //     if(file_exists(ROOT_PATH.'/app/models/ddbb.json') )  {
+    //         $json = file_get_contents($this->dbjson);
+    //         $jArray = json_decode($json, true);
+    //     } else {
+    //         $jArray = [];
+    //     }
+    //     $jArray[sizeof($jArray)] = [ 
+    //         "tasca"=> $nom_tasca, 
+    //         "nom"=> $nom_creador, 
+    //         "inici"=> $data_inici, 
+    //         "final"=>$data_final
+    //         ] ;
+    //     file_put_contents(ROOT_PATH.'/app/models/ddbb.json', json_encode($jArray, JSON_PRETTY_PRINT));
+    // }
 }
 
 

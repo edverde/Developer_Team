@@ -20,13 +20,17 @@ $routes = array(
 	// '/mostrar' => 'mostrar#mostrar'
 	'/' => 'test#vista',
 	// '/kk' => 'error#kk',
-	// '/tascat' => 'test#index',
+	// '/tascat' => 'test#index',s
 	'/index' => 'test#vista',
 	'/nova' => 'crear#crear',
 	'/mod' => 'mod#mod',
-	'/mostrar' => 'buscar#buscar'
+	'/mostrar' => 'buscar#buscar',
+	'/creant' => 'crear#crearTasca',
+	'/modotest' => 'crear#test'
 	// '/eliminar' => 'eliminar#eliminar',
 	// '/mostrar' => 'mostrar#mostrar'
+	
 
 	
 );
+

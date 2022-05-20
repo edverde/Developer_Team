@@ -26,85 +26,34 @@
                                 </tr>
                             </thead>
                             <!-- Contingut de tasques -->
-                            <tbody class="bgspecial  border-gray-200 text-gray-900 text-center">
+                            <tbody class="bgspecial  border-gray-200 text-gray-900 text-center"> 
+                            <?php 
+                            require_once '../app/models/ddbb.php';
+                            $data=[];
+                            if(file_exists('../app/models/ddbb.json')){
+                                $json = file_get_contents('../app/models/ddbb.json');;
+                            $data = json_decode($json, true);
+                            }else{?>
+                            <h6 style="color:red">No hi han tasques</h6><?php
+                                
+                            }
+
+                            
+                            foreach ($data as $key){ ?>
                                 <tr class="border-b border-gray-200">
-                                    <td class="p-4">Fumar petas</td>
-                                    <td class="p-4">Eddie</td>
-                                    <td class="p-4">Pendent</td>
-                                    <td class="p-4">20/02/22</td>
-                                    <td class="p-4">21/02/22</td>
+                                    <td class="p-4"><?php echo $key["tasca"]?> </td>
+                                    <td class="p-4"><?php echo $key["nom"]?></td>
+                                    <td class="p-4"><?php echo $key["estat"]?></td>
+                                    <td class="p-4"><?php echo $key["inici"]?></td>
+                                    <td class="p-4"><?php echo $key["final"]?></td>
                                     <td class="text-sm font-medium">
                                         <a href="/web/mod"><button class="boton w-20  bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full mr-5">Editar</button></a>
                                         <a href="/web/nova"><button class="boton w-20  bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full ">Eliminar</button></a>
                                     </td>
                                 </tr>
-                                <tr class="border-b border-gray-200">
-                                    <td class="p-4">Fumar petas</td>
-                                    <td class="p-4">Eddie</td>
-                                    <td class="p-4">Pendent</td>
-                                    <td class="p-4">20/02/22</td>
-                                    <td class="p-4">21/02/22</td>
-                                    <td class="text-sm font-medium">
-                                        <a href="/web/nova"><button class="boton w-20  bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full mr-5">Editar</button></a>
-                                        <a href="/web/nova"><button class="boton w-20  bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full ">Eliminar</button></a>
-                                    </td>
-                                </tr>
-                                <tr class="border-b border-gray-200">
-                                    <td class="p-4">Fumar petas</td>
-                                    <td class="p-4">Eddie</td>
-                                    <td class="p-4">Pendent</td>
-                                    <td class="p-4">20/02/22</td>
-                                    <td class="p-4">21/02/22</td>
-                                    <td class="text-sm font-medium">
-                                        <a href="/web/nova"><button class="boton w-20  bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full mr-5">Editar</button></a>
-                                        <a href="/web/nova"><button class="boton w-20  bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full ">Eliminar</button></a>
-                                    </td>
-                                </tr>
-                                <tr class="border-b border-gray-200">
-                                    <td class="p-4">Fumar petas</td>
-                                    <td class="p-4">Eddie</td>
-                                    <td class="p-4">Pendent</td>
-                                    <td class="p-4">20/02/22</td>
-                                    <td class="p-4">21/02/22</td>
-                                    <td class="text-sm font-medium">
-                                        <a href="/web/nova"><button class="boton w-20  bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full mr-5">Editar</button></a>
-                                        <a href="/web/nova"><button class="boton w-20  bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full ">Eliminar</button></a>
-                                    </td>
-                                </tr>
-                                <tr class="border-b border-gray-200">
-                                    <td class="p-4">Fumar petas</td>
-                                    <td class="p-4">Eddie</td>
-                                    <td class="p-4">Pendent</td>
-                                    <td class="p-4">20/02/22</td>
-                                    <td class="p-4">21/02/22</td>
-                                    <td class="text-sm font-medium">
-                                        <a href="/web/nova"><button class="boton w-20  bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full mr-5">Editar</button></a>
-                                        <a href="/web/nova"><button class="boton w-20  bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full ">Eliminar</button></a>
-                                    </td>
-                                </tr>
-                                <tr class="border-b border-gray-200">
-                                    <td class="p-4">Fumar petas</td>
-                                    <td class="p-4">Eddie</td>
-                                    <td class="p-4">Pendent</td>
-                                    <td class="p-4">20/02/22</td>
-                                    <td class="p-4">21/02/22</td>
-                                    <td class="text-sm font-medium">
-                                        <a href="/web/nova"><button class="boton w-20  bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full mr-5">Editar</button></a>
-                                        <a href="/web/nova"><button class="boton w-20  bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full ">Eliminar</button></a>
-                                    </td>
-                                </tr>
-                                <tr class="border-b border-gray-200">
-                                    <td class="p-4">Fumar petas</td>
-                                    <td class="p-4">Eddie</td>
-                                    <td class="p-4">Pendent</td>
-                                    <td class="p-4">20/02/22</td>
-                                    <td class="p-4">21/02/22</td>
-                                    <td class="text-sm font-medium">
-                                        <a href="/web/nova"><button class="boton w-20  bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full mr-5">Editar</button></a>
-                                        <a href="/web/nova"><button class="boton w-20  bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full ">Eliminar</button></a>
-                                    </td>
-                                </tr>
 
+                            
+                                <?php } ?>
                             </tbody>
                         </table>
                     </div>

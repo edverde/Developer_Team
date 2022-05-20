@@ -5,15 +5,15 @@
             <h1 class="p-5 text-white text-center text-3xl font-bold py-2 drop-shadow-xl">Crear Tasca</h1>
             <form action="creant" method="POST" class="p-5">
                 <label for="nom_tasca">Nom de tasca: </label> <br>
-                <input type="text" id="nom_tasca" name="nom_tasca" class="rounded-md w-full outline-orange-500 mb-2"><br>
+                <input type="text" id="nom_tasca" name="nom_tasca" class="rounded-md w-full outline-orange-500 mb-2" require><br>
                 <label for="nombre">Nom del creador: </label> <br>
-                <input type="text" id="nombre" name="nom" class="rounded-md w-full outline-orange-500 mb-2"><br>
+                <input type="text" id="nombre" name="nom" class="rounded-md w-full outline-orange-500 mb-2"require><br>
                 <label for="dataI">Data inici: </label> <br>
-                <input type="datetime-local" id="dataI" name="data_inici" class="rounded-md w-full  outline-orange-500 mb-2"><br>
+                <input type="datetime-local" id="dataI" name="data_inici" class="rounded-md w-full  outline-orange-500 mb-2"require><br>
                 <label for="dataF">Data final: </label> <br>
-                <input type="datetime-local" id="dataF" name="data_final" class="rounded-md w-full  outline-orange-500 mb-2"><br>
+                <input type="datetime-local" id="dataF" name="data_final" class="rounded-md w-full  outline-orange-500 mb-2"require><br>
                 <label for="estat">Estat: </label> <br>
-                <select name="estat" id="estat"  class="rounded-md w-full  outline-orange-500 mb-2">
+                <select name="estat" id="estat"  class="rounded-md w-full  outline-orange-500 mb-2"require>
                     <option value="pendent">Pendent</option>
                     <option value="execusio">En execusio</option>
                     <option value="finalitzada">Finalitzada</option>    

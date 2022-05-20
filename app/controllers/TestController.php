@@ -27,6 +27,8 @@ class TestController extends ApplicationController
 		// echo "quiero morir";
 		// exit();
 		$this->view->message = "hello from test::index";
+
+		return ['msj' => 'hola'];
 		
 	}
 }

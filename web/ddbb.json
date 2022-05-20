@@ -4,5 +4,23 @@
         "nom": null,
         "inici": null,
         "final": null
+    },
+    {
+        "tasca": null,
+        "nom": null,
+        "inici": null,
+        "final": null
+    },
+    {
+        "tasca": "caca2",
+        "nom": "cagon",
+        "inici": "",
+        "final": ""
+    },
+    {
+        "tasca": "caca",
+        "nom": "cagon",
+        "inici": "",
+        "final": ""
     }
 ]

@@ -26,7 +26,9 @@ $routes = array(
 	'/mod' => 'mod#mod',
 	'/mostrar' => 'buscar#buscar',
 	'/creant' => 'crear#crearTasca',
-	'/modotest' => 'crear#test'
+	'/modotest' => 'crear#test',
+	'/eliminar' => 'crear#borrarTasca'
+	// '/modificacio' => ''
 	// '/eliminar' => 'eliminar#eliminar',
 	// '/mostrar' => 'mostrar#mostrar'
 	

@@ -12,8 +12,8 @@ class CrearController extends ApplicationController
 	}
 	public function testAction()
 	{
-		echo "quiero morir";
-		exit();
+		echo "estic aqui";
+		die();
 		$this->view->message = "hello from test::index";
 		
 	}
@@ -28,7 +28,20 @@ class CrearController extends ApplicationController
 
 		
 		
-		//header("Location: /web/index");
+		header("Location: /web/index");
+	}
+	// public function mostrarTascas(){
+	// 	$model = new Model_ddbb();
+	// 	$model->ImprimirTasques();
+	// }
+
+	public function borrarTascaAction(){
+		
+		$model = new Model_ddbb();
+		
+		$model->eliminarTasca($_POST['id']);
+		
+		header("Location: /web/index");
 	}
 	
 	

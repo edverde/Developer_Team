@@ -3,20 +3,21 @@
         
         <div class ="mains bg-orange-300 ">
             <h1 class="p-5 text-white text-center text-3xl font-bold py-2 drop-shadow-xl">Modificar Tasca</h1>
-            <form action="" class="p-5">
-                <label for="numero">Nom de la tasca: </label> <br>
-                <input type="number" id="numero" name="numero" class="rounded-md w-full outline-orange-500"><br>
-                <label for="nombre">Nom del creador: </label> <br>
-                <input type="text" id="nombre" name="nom" class="rounded-md w-full outline-orange-500"><br>
+            <form action="modificacio"  method="POST" class="p-5">
+                <label for="tasca">Nom de la tasca: </label> <br>
+                <input type="text" id="tasca" name="tasca" class="rounded-md w-full outline-orange-500" value="<?php echo $_POST['tasca'] ?>"><br>
+                <label for="nom">Nom del creador: </label> <br>
+                <input type="text" id="nom" name="nom" class="rounded-md w-full outline-orange-500" value="<?php echo $_POST['nom'] ?>"><br>
                 <label for="dataI">Data inici: </label> <br>
-                <input type="datetime-local" id="dataI" name="data_inici" class="rounded-md w-full  outline-orange-500"><br>
+                <input type="datetime-local" id="dataI" name="inici" class="rounded-md w-full  outline-orange-500" value="<?php echo $_POST['inici'] ?>"><br>
                 <label for="dataF">Data final: </label> <br>
-                <input type="datetime-local" id="dataF" name="data_final" class="rounded-md w-full  outline-orange-500"><br>
+                <input type="datetime-local" id="dataF" name="final" class="rounded-md w-full  outline-orange-500"  value="<?php echo $_POST['final'] ?>"><br>
                 <label for="estat">Estat: </label> <br>
+                <input type="hidden" name='id'  value="<?php echo $_POST['id'] ?>">
                 <select name="estat" id="estat"  class="rounded-md w-full  outline-orange-500 mb-2">
-                    <option value="pendent">Pendent</option>
-                    <option value="execusio">En execusio</option>
-                    <option value="finalitzada">Finalitzada</option>    
+                    <option value="pendent" <?php if($_POST['estat'] == 'pendent') { echo 'selected'; } ?> >Pendent</option>
+                    <option value="execusio"<?php if($_POST['estat'] == 'execusio') { echo 'selected';} ?>>En execusio</option>
+                    <option value="finalitzada"<?php if($_POST['estat'] == 'finalitzada') { echo 'selected'; } ?>>Finalitzada</option>    
                 </select> <br>
                 <input type="submit" value="Guardar" class="boton w-full  bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full">
             </form>

@@ -38,23 +38,83 @@ class Model_ddbb extends Model{
         }
         header("Location: /web/index");
     }
-    public function ImprimirTasques(){
-        // $data = [];
+    public function ImprimirTasca($nom_tasca){
+          
         $contenido = file_get_contents("../app/models/ddbb.json");
-        $data = json_decode($contenido, true);
-        return $data;
+        $data = json_decode($contenido, true); 
+        // var_dump($contenido) ;
+        
+        foreach ($data as $key => $value) { 
+            if($value['tasca'] == $nom_tasca){
+                // echo $value['tasca'] . " és igual que " . $nom_tasca.'<br>'; 
+                // echo $value['tasca'].' <br>';
+                // echo $value['nom'].' <br>';
+                // echo $value['estat'].' <br>';
+                // echo $value['inici'].' <br>';
+                // echo $value['final'].' <br>';
+                
+                return $value['id'];
+
+                
+                //return $data[$key];
+            }
+        }
+
+        return 0;
+        
     }
 
     public function eliminarTasca($id){
         $contenido = file_get_contents("../app/models/ddbb.json");
         $data = json_decode($contenido, true);    
+        
         foreach ($data as $key => $value) { 
+            
+           
+            
             if ($value['id'] == $id) { 
+               
+              
+               
                 unset($data[$key]);
             } 
         } 
+        
         file_put_contents('../app/models/ddbb.json', json_encode($data, JSON_PRETTY_PRINT));
     }
+
+
+    public function modificarTasca($tasca, $nom, $inici, $final, $estat, $id){
+        $contenido = file_get_contents("../app/models/ddbb.json");
+        $data = json_decode($contenido, true); 
+        
+        foreach ($data as $key => $value) { 
+            
+            if ($value['id'] == $id) { 
+                
+                if(isset($tasca)){ 
+                    $data[$key]['tasca'] = $tasca; 
+                    
+                } 
+                if(isset($usuari)){ 
+                    $data[$key]['nom'] = $nom; 
+                } 
+                if(isset($estat)){ 
+                    $data[$key]['estat'] = $estat; 
+                } 
+                if(isset($inici)){ 
+                    $data[$key]['inici'] = $inici; 
+                } 
+                if(isset($final)){ 
+                    $data[$key]['final'] = $final; 
+                } 
+                if(isset($id)){ 
+                    $data[$key]['id'] = $id; 
+                } 
+            } 
+        } 
+        file_put_contents('../app/models/ddbb.json', json_encode($data, JSON_PRETTY_PRINT));    }
+
     
 }
 

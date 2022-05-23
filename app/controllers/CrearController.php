@@ -38,6 +38,7 @@ class CrearController extends ApplicationController
 	public function borrarTascaAction(){
 		
 		$model = new Model_ddbb();
+
 		
 		$model->eliminarTasca($_POST['id']);
 		

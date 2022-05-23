@@ -1,10 +1,18 @@
-[
-    {
-        "tasca": "Comprar flors",
-        "nom": "Maria",
+{
+    "2": {
+        "tasca": "puta",
+        "nom": "cagon2",
         "inici": "",
         "final": "",
         "estat": "execusio",
-        "id": 1
+        "id": "2"
+    },
+    "3": {
+        "tasca": "Comprar flors",
+        "nom": "cagon2",
+        "inici": "",
+        "final": "",
+        "estat": "pendent",
+        "id": 2
     }
-]
+}

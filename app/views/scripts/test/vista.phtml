@@ -6,9 +6,9 @@
                 <a href="nova">
                     <button class="boton w-52  bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full mr-5">Nova tasca</button>
                 </a>
-                <a href="mostrar">
+                <!-- <a href="mostrar">
                     <button class="boton w-52 bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full">Buscar tasca</button>
-                </a>
+                </a> -->
             </div>
             
            
@@ -21,8 +21,8 @@
                                     <th class="p-4 text-sm">NOM TASCA</th>
                                     <th class="p-4 text-sm">NOM DEL CREADOR</th>
                                     <th class="p-4 text-sm">ESTAT</th>
-                                    <th class="p-4 text-sm">HORA D'INICI</th>
-                                    <th class="p-4 text-sm">HORA FINALITZACIO</th>
+                                    <th class="p-4 text-sm">DATA I HORA D'INICI</th>
+                                    <th class="p-4 text-sm">DATA I HORA FINALITZACIO</th>
                                     <th class="p-4 text-sm"></th>
                                 </tr>
                             </thead>
@@ -49,8 +49,18 @@
                                     <td class="p-4"><?php echo $key["inici"]?></td>
                                     <td class="p-4"><?php echo $key["final"]?></td>
                                     <td class="text-sm font-medium">
+                                    
+                                    <form action="veure" method="post" style="display: inline-block" class="mr-1" >
+                                        <input type="hidden" id="tasca" name="tasca" value="<?php echo$key['tasca']?>">
+                                        <input type="hidden" id="nom" name="nom" value="<?php echo $key['nom']?>">
+                                        <input type="hidden" id="dataI" name="inici" value="<?php echo $key['inici']?>">
+                                        <input type="hidden" id="dataF" name="final" value="<?php echo $key['final']?>">
+                                        <input type="hidden" id="estat" name="estat" value="<?php echo $key['estat']?>">
+                                        <input type="hidden" id="id" name="id" value="<?php echo $key['id']?>">
+                                    <button type="submit "class="boton w-20  bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full mr-5">Veure</button>
+                                    </form>
 
-                                    <form action="mod" method="POST" class="p-5">
+                                    <form action="mod" method="post" style="display: inline-block" class="mr-1" >
                                         <input type="hidden" id="tasca" name="tasca" value="<?php echo$key['tasca']?>">
                                         <input type="hidden" id="nom" name="nom" value="<?php echo $key['nom']?>">
                                         <input type="hidden" id="dataI" name="inici" value="<?php echo $key['inici']?>">

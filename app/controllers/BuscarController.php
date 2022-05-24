@@ -17,6 +17,7 @@ class BuscarController extends ApplicationController
 		
 		header("Location: /web/mostrar");
 	}
-	
+
+
 	
 }

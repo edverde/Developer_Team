@@ -9,24 +9,16 @@
  * '/' => 'index#index',
  * '/calendar' => 'calendar#index'
  */
+
 $routes = array(
-	// '/test' => 'test#index',
-	
-	// '/' => 'tasca#index',
-	// '/nova' => 'tasca#crear',
-	// '/mod' => 'tasca#mod',
-	// '/vista' => 'tasca#index',
-	// '/eliminar' => 'eliminar#eliminar',
-	// '/mostrar' => 'mostrar#mostrar'
 	'/' => 'test#vista',
-	// '/kk' => 'error#kk',
-	// '/tascat' => 'test#index',
 	'/index' => 'test#vista',
 	'/nova' => 'crear#crear',
 	'/mod' => 'mod#mod',
-	'/mostrar' => 'buscar#buscar'
-	// '/eliminar' => 'eliminar#eliminar',
-	// '/mostrar' => 'mostrar#mostrar'
-
-	
+	'/creant' => 'crear#crearTasca',
+	'/modotest' => 'crear#test',
+	'/eliminar' => 'crear#borrarTasca',
+	'/modificacio'=>'mod#cambiar',
+	'/veure' => 'veure#veure'
 );
+

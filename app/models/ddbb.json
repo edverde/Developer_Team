@@ -1,37 +1,18 @@
 [
-  {
-    "tasca": "caca",
-    "nom": "cagon",
-    "inici": "2022-05-07",
-    "final": null,
-    "estat": null
-  },
-  {
-    "tasca": "caca2",
-    "nom": "cagon2",
-    "inici": "2022-05-07",
-    "final": null,
-    "estat": null
-  },
-  {
-    "tasca": "caca3",
-    "nom": "cagon3",
-    "inici": "2022-05-07",
-    "final": null,
-    "estat": null
-  },
-  {
-    "tasca": "caca4",
-    "nom": "cagon4",
-    "inici": "2022-05-07",
-    "final": null,
-    "estat": null
-  },
-  {
-    "tasca": "cagar a la via",
-    "nom": "ramonc\u00edn",
-    "inici": "",
-    "final": "2022-05-20T19:04",
-    "estat": null
-  }
+    {
+        "tasca": "comprar porros",
+        "nom": "el fary",
+        "inici": "2022-05-14T09:30",
+        "final": "2022-05-29T09:31",
+        "estat": "finalitzada",
+        "id": 1
+    },
+    {
+        "tasca": "Comprar flors",
+        "nom": "Maria",
+        "inici": "2022-05-06T09:32",
+        "final": "",
+        "estat": "execusio",
+        "id": 2
+    }
 ]

@@ -1,34 +1,18 @@
-{
-    "0": {
+[
+    {
         "tasca": "comprar porros",
         "nom": "el fary",
-        "inici": "",
-        "final": "",
-        "estat": "pendent",
+        "inici": "2022-05-14T09:30",
+        "final": "2022-05-29T09:31",
+        "estat": "finalitzada",
         "id": 1
     },
-    "1": {
-        "tasca": "Comprar flors roses",
-        "nom": "Maria",
-        "inici": "2022-05-06T12:38",
-        "final": "2022-05-07T12:39",
-        "estat": "execusio",
-        "id": "2"
-    },
-    "3": {
+    {
         "tasca": "Comprar flors",
-        "nom": "el fary",
-        "inici": "",
-        "final": "",
-        "estat": "pendent",
-        "id": 4
-    },
-    "4": {
-        "tasca": "comprar porros de costo",
         "nom": "Maria",
-        "inici": "2022-04-14T12:38",
-        "final": "2022-05-29T12:38",
+        "inici": "2022-05-06T09:32",
+        "final": "",
         "estat": "execusio",
-        "id": "5"
+        "id": 2
     }
-}
+]

@@ -9,28 +9,16 @@
  * '/' => 'index#index',
  * '/calendar' => 'calendar#index'
  */
-$routes = array(
 
-	
-	
+$routes = array(
 	'/' => 'test#vista',
 	'/index' => 'test#vista',
 	'/nova' => 'crear#crear',
 	'/mod' => 'mod#mod',
-	'/mostrar' => 'buscar#buscar',
 	'/creant' => 'crear#crearTasca',
 	'/modotest' => 'crear#test',
 	'/eliminar' => 'crear#borrarTasca',
-	'/buscador' => 'buscar#buscarTasca',
 	'/modificacio'=>'mod#cambiar',
-	'/veure' => 'veure#veure',
-	// '/veure' => 'buscar#veureTasca'
-	// '/veure'=>'buscar#veureTasca'
-		// '/modificacio' => ''
-	// '/eliminar' => 'eliminar#eliminar',
-	// '/mostrar' => 'mostrar#mostrar'
-	
-
-	
+	'/veure' => 'veure#veure'
 );
 

@@ -1,17 +1,11 @@
 <body>
     <main>
         <div class="sm:container sm:mx-auto my-32 ">
-            
             <div class="flex justify-center">
                 <a href="nova">
                     <button class="boton w-52  bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full mr-5">Nova tasca</button>
                 </a>
-                <!-- <a href="mostrar">
-                    <button class="boton w-52 bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full">Buscar tasca</button>
-                </a> -->
             </div>
-            
-           
             <div class="flex flex-col mt-4">
                 <div class=" overflow-auto sm:-mx-4 sm:px-4 lg:-mx-4 lg:px-4">
                     <div class=" min-w-full overflow-hidden align-center rounded-lg inline-block">
@@ -31,16 +25,15 @@
 
                             <?php 
                             require_once '../app/models/ddbb.php';
+
                             $data=[];
                             if(file_exists('../app/models/ddbb.json')){
                                 $json = file_get_contents('../app/models/ddbb.json');;
-                            $data = json_decode($json, true);
+                                $data = json_decode($json, true);
                             }else{?>
                             <h6 style="color:red">No hi han tasques</h6><?php
-                                
                             }
 
-                            
                             foreach ($data as $key){ ?>
                                 <tr class="border-b border-gray-200">
                                     <td class="p-4"><?php echo $key["tasca"]?> </td>
@@ -50,38 +43,32 @@
                                     <td class="p-4"><?php echo $key["final"]?></td>
                                     <td class="text-sm font-medium">
                                     
-                                    <form action="veure" method="post" style="display: inline-block" class="mr-1" >
-                                        <input type="hidden" id="tasca" name="tasca" value="<?php echo$key['tasca']?>">
-                                        <input type="hidden" id="nom" name="nom" value="<?php echo $key['nom']?>">
-                                        <input type="hidden" id="dataI" name="inici" value="<?php echo $key['inici']?>">
-                                        <input type="hidden" id="dataF" name="final" value="<?php echo $key['final']?>">
-                                        <input type="hidden" id="estat" name="estat" value="<?php echo $key['estat']?>">
-                                        <input type="hidden" id="id" name="id" value="<?php echo $key['id']?>">
-                                    <button type="submit "class="boton w-20  bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full mr-5">Veure</button>
-                                    </form>
+                                        <form action="veure" method="post" style="display: inline-block" class="mr-1" >
+                                            <input type="hidden" id="tasca" name="tasca" value="<?php echo$key['tasca']?>">
+                                            <input type="hidden" id="nom" name="nom" value="<?php echo $key['nom']?>">
+                                            <input type="hidden" id="dataI" name="inici" value="<?php echo $key['inici']?>">
+                                            <input type="hidden" id="dataF" name="final" value="<?php echo $key['final']?>">
+                                            <input type="hidden" id="estat" name="estat" value="<?php echo $key['estat']?>">
+                                            <input type="hidden" id="id" name="id" value="<?php echo $key['id']?>">
+                                            <button type="submit "class="boton w-20  bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full mr-5">Veure</button>
+                                        </form>
 
-                                    <form action="mod" method="post" style="display: inline-block" class="mr-1" >
-                                        <input type="hidden" id="tasca" name="tasca" value="<?php echo$key['tasca']?>">
-                                        <input type="hidden" id="nom" name="nom" value="<?php echo $key['nom']?>">
-                                        <input type="hidden" id="dataI" name="inici" value="<?php echo $key['inici']?>">
-                                        <input type="hidden" id="dataF" name="final" value="<?php echo $key['final']?>">
-                                        <input type="hidden" id="estat" name="estat" value="<?php echo $key['estat']?>">
-                                        <input type="hidden" id="id" name="id" value="<?php echo $key['id']?>">
-                                        <button type="submit "class="boton w-20  bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full mr-5">Editar</button>
-
-                                    </form>    
+                                        <form action="mod" method="post" style="display: inline-block" class="mr-1" >
+                                            <input type="hidden" id="tasca" name="tasca" value="<?php echo$key['tasca']?>">
+                                            <input type="hidden" id="nom" name="nom" value="<?php echo $key['nom']?>">
+                                            <input type="hidden" id="dataI" name="inici" value="<?php echo $key['inici']?>">
+                                            <input type="hidden" id="dataF" name="final" value="<?php echo $key['final']?>">
+                                            <input type="hidden" id="estat" name="estat" value="<?php echo $key['estat']?>">
+                                            <input type="hidden" id="id" name="id" value="<?php echo $key['id']?>">
+                                            <button type="submit "class="boton w-20  bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full mr-5">Editar</button>
+                                        </form>  
+                                        
                                         <form action="eliminar" method="post" style="display: inline-block" class="mr-1">
-                                            
                                             <input type="hidden" name='id' class="boton w-20  bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full " value="<?php echo $key['id']; ?>">
-
                                             <button type="submit" class="boton w-20  bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full " >Eliminar</button>
-    
-                                           
                                         </form> 
                                     </td>
                                 </tr>
-
-                            
                                 <?php } //final foreach?>
                             </tbody>
                         </table>
